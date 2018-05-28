@@ -1,0 +1,10 @@
+setup.py
+fun1/__init__.py
+fun1/first.py
+fun2/__init__.py
+fun2/second.py
+lab10lib2.egg-info/PKG-INFO
+lab10lib2.egg-info/SOURCES.txt
+lab10lib2.egg-info/dependency_links.txt
+lab10lib2.egg-info/requires.txt
+lab10lib2.egg-info/top_level.txt

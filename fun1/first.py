@@ -8,7 +8,7 @@ class Fun1:
 
     def showevents(self):
 
-        cursor = Functions1.cnx.cursor()
+        cursor = Fun1.cnx.cursor()
 
         query = ("SELECT * FROM calendar.event")
         cursor.execute(query)
@@ -35,8 +35,8 @@ class Fun1:
                      "VALUES (%s, %s, %s, %s, %s, %s)")
 
         if type == "0":
-            cr = Functions1.cnx.cursor()
-            cursor = Functions1.cnx.cursor()
+            cr = Fun1.cnx.cursor()
+            cursor = Fun1.cnx.cursor()
             query = ("select max(id) as id from event")
             cr.execute(query)
             for (x) in cursor:
@@ -51,8 +51,8 @@ class Fun1:
         elif type == "d":
             fr = 0
             for x in range(0, 30):
-                cr = Functions1.cnx.cursor()
-                cursor = Functions1.cnx.cursor()
+                cr = Fun1.cnx.cursor()
+                cursor = Fun1.cnx.cursor()
 
                 query = ("select max(id) as id from event")
                 cr.execute(query)
@@ -69,8 +69,8 @@ class Fun1:
         elif type == "m":
             fr = 0
             for x in range(0, 12):
-                cr = Functions1.cnx.cursor()
-                cursor = Functions1.cnx.cursor()
+                cr = Fun1.cnx.cursor()
+                cursor = Fun1.cnx.cursor()
 
                 query = ("select max(id) as id from event")
                 cr.execute(query)
@@ -86,8 +86,8 @@ class Fun1:
         elif type == "y":
             fr = 0
             for x in range(0, 2):
-                cr = Functions1.cnx.cursor()
-                cursor = Functions1.cnx.cursor()
+                cr = Fun1.cnx.cursor()
+                cursor = Fun1.cnx.cursor()
 
                 query = ("select max(id) as id from event")
                 cr.execute(query)
@@ -102,7 +102,7 @@ class Fun1:
                 cursor.execute(add_event, data)
                 fr = fr + int(freq)
 
-        Functions1.cnx.commit()
+        Fun1.cnx.commit()
         cursor.close()
         input()
 

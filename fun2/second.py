@@ -10,14 +10,14 @@ class Fun2:
     def deleteevent(self):
 
         name = input("Nazwa:\n")
-        cursor = Functions2.cnx.cursor()
+        cursor = Fun2.cnx.cursor()
         query = "delete from event where name = %s"
         cursor.execute(query, (name,))
-        Functions2.cnx.commit()
+        Fun2.cnx.commit()
         cursor.close()
 
     def sortedevents(self):
-        cursor = Functions2.cnx.cursor()
+        cursor = Fun2.cnx.cursor()
         query = ("SELECT * FROM calendar.event where start < now() "
                  "+ interval 30 day and start > now() order by start")
         cursor.execute(query)
